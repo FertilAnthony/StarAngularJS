@@ -6,10 +6,6 @@ Fournit une structure de base pour les projets AngularJS
 
 > L'installation en globale de gulp et bower est optionelle
 
-```sh
-# Depuis le réseau Niji uniquement, configuration de git pour bower
-git config url."https://".insteadOf git://
-```
 
 ```sh
 # Démarre le boilerplate
