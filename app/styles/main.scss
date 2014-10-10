@@ -1,0 +1,13 @@
+@import "partials/all";
+@import "modules/all";
+
+body {
+
+  h1 {
+    color: #333333;
+  }
+}
+
+.nav, .pagination, .carousel, .panel-title a { 
+	cursor: pointer;
+}
