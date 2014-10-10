@@ -6,6 +6,10 @@ Fournit une structure de base pour les projets AngularJS
 
 > L'installation en globale de gulp et bower est optionelle
 
+```sh
+# Installation du boilerplate
+npm install
+```
 
 ```sh
 # Démarre le boilerplate
