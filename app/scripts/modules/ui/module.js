@@ -9,5 +9,5 @@ module.exports = angular
   ])
   .config(require('./config/routing'))
   .controller('HomeController', require('./controllers/home'))
-  .directive('customLoader', require('./directive/customLoader'))
+ // .directive('customLoader', require('./directive/customLoader'))
 ;

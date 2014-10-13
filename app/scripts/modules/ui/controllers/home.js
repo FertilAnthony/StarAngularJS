@@ -16,6 +16,9 @@ function HomeController(Stations, $log, Tracer) {
 		$log.log(stations);
 	});
 
+	// Use Tracer
+	Tracer.trace(HomeController);
+
 }
 
 module.exports = HomeController;
