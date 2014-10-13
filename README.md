@@ -1,7 +1,3 @@
-# Niji AngularJS Boilerplate v0.7.0
-
-Fournit une structure de base pour les projets AngularJS
-
 ## Installation
 
 > L'installation en globale de gulp et bower est optionelle
