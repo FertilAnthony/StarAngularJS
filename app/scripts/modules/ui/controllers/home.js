@@ -3,18 +3,18 @@
 /**
  * @ngInject
  */
-function HomeController(Stations, $log) {
-  // ViewModel
-  var vm = this;
+function HomeController(Stations, $log, Tracer) {
+	// ViewModel
+	var vm = this;
 
-  vm.welcomeMessage = 'Bienvenue dans l\'application pour la star de Rennes';
-  vm.stations = [];
+	vm.welcomeMessage = 'Bienvenue dans l\'application pour la star de Rennes';
+	vm.stations = [];
 
-  Stations.get().then(function onSuccess(response) {
-  	var stations = response.data.opendata.answer.data.station;
-  	vm.stations = stations;
-  	$log.log(stations);
-  });
+	Stations.get().then(function onSuccess(response) {
+		var stations = response.data.opendata.answer.data.station;
+		vm.stations = stations;
+		$log.log(stations);
+	});
 
 }
 

@@ -1,14 +1,43 @@
-<h1>StarAngularJS</h1>
-<p>{{vm.welcomeMessage}}</p>
-<tabset vertical="true" type="pills">
-  <tab heading="Liste des stations de vélos" >
-    <ul>
-      <li class="stationVelib" data-ng-repeat="station in vm.stations">
-        <a href="#">
-          {{ station.name }}
-        </a>
-      </li>
-    </ul>
-  </tab>
-  <tab heading="Lignes de bus"></tab>
-</tabset>
+<div class="container">
+  <div class="jumbotron">
+    <h1>StarAngularJS</h1>
+    <p class="message">{{vm.welcomeMessage}}</p>
+  </div>
+  <div class="listeContent">
+    <tabset vertical="true" type="pills">
+      <tab heading="Liste des stations de vélos" >
+        <!-- <div id="loaderDiv" customLoader>
+          <img src="http://preloaders.net/preloaders/166/Pacman.gif" class="ajax-loader"/>
+        </div> -->
+        <div class="row">
+          <div class="stationVelib col-sm-3 col-xs-6" data-ng-repeat="station in vm.stations">
+            <div class="thumbnail velib">
+              <!-- <img data-src="#" alt="{{ station.name }}" /> -->
+              <div class="caption">
+                <h3 class="name">{{ station.name }}</h3>
+              </div>
+              <div class="bottom">
+                <div class="positionnement">
+                  <div class="district">{{ station.district }}</div>
+                  <div class="adresse">{{ station.address }}</div>
+                </div>
+                <ul class="list-group totalBikes">
+                  <li class="slotAvailable list-group-item">
+                    <span class="badge pull-right">{{ station.slotsavailable }}</span>
+                    Total de vélos:
+                  </li>
+                  <li class="bikeAvailable list-group-item">
+                    <span class="badge pull-right">{{ station.bikesavailable }}</span>
+                    Disponibles:
+                  </li>
+                </ul>
+                <a data-ng-href="/detail-station/{{ station.number }}" class="btn btn-primary detailVelib">Détail</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </tab>
+      <tab heading="Lignes de bus"></tab>
+    </tabset>
+  </div>
+</div>
