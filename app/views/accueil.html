@@ -1,0 +1,14 @@
+<h1>StarAngularJS</h1>
+<p>{{vm.welcomeMessage}}</p>
+<tabset vertical="true" type="pills">
+  <tab heading="Liste des stations de vélos" >
+    <ul>
+      <li class="stationVelib" data-ng-repeat="station in vm.stations">
+        <a href="#">
+          {{ station.name }}
+        </a>
+      </li>
+    </ul>
+  </tab>
+  <tab heading="Lignes de bus"></tab>
+</tabset>

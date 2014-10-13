@@ -23,7 +23,11 @@ function StationsService($http, $log, OpenDataApi) {
       }
     };
     // TODO: Appel au web service en utilisant le service angular $http
-    return $http(apiArgs);
+    var promise = $http(apiArgs);
+    promise.then(function onSuccess(response) {
+      $log.log(response);
+    });
+    return promise;
   }
 }
 
