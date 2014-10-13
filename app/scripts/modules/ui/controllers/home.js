@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function HomeController(Stations, $log, Tracer) {
+function HomeController(Stations, $log) {
 	// ViewModel
 	var vm = this;
 
