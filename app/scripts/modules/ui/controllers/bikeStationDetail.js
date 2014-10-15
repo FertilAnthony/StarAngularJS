@@ -3,7 +3,11 @@
 /**
  * @ngInject
  */
-function BikeStationDetailController(Stations, $log) {
+function BikeStationDetailController($log) {
+	// ViewModel
+	var vm = this;
+
+	vm.station = {};
 
 }
 

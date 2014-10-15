@@ -53,7 +53,52 @@ body {
 			white-space: nowrap;
 		}
 	}
+
+	#loaderDiv {
+	   position: fixed;
+	   top: 0;
+	   right: 0;
+	   bottom: 0;
+	   left: 0;
+	   z-index: 1100;
+	   background-color: white;
+	   opacity: .6;
+	}
+
+	.ajax-loader {
+	   position: absolute;
+	   left: 50%;
+	   top: 50%;
+	   margin-left: -32px; /* -1 * image width / 2 */
+	   margin-top: -32px; /* -1 * image height / 2 */
+	   display: block;
+	}
 	
+	.searchBlock {
+		margin: 5px 15px 20px 15px;
+
+		.form-control {
+			width: 290px;
+			margin-bottom: 10px;
+
+			&.nbItems {
+				width: 80px;
+				display: inline-block;
+				margin-left: 50px;
+			}
+		}
+
+		.next {
+			margin-left: 70px;
+		}
+		.previous {
+			margin-right: 70px;
+		}
+
+		.paginated {
+			margin-bottom: 20px;
+		}
+	}
   }
 }
 

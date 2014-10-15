@@ -3,16 +3,19 @@
 /**
  * @ngInject
  */
-function HomeController(Stations, $log) {
+function HomeController(Stations, $log, $scope) {
 	// ViewModel
 	var vm = this;
 
 	vm.welcomeMessage = 'Bienvenue dans l\'application pour la star de Rennes';
-	vm.stations = [];
+	//vm.stations = [];
+	$scope.stations = [];
+
 
 	Stations.get().then(function onSuccess(response) {
 		var stations = response.data.opendata.answer.data.station;
-		vm.stations = stations;
+		//vm.stations = stations;
+		$scope.stations = stations;
 		$log.log(stations);
 	});
 

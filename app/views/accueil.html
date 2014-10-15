@@ -6,11 +6,13 @@
   <div class="listeContent">
     <tabset vertical="true" type="pills">
       <tab heading="Liste des stations de vélos" >
-        <!-- <div id="loaderDiv" customLoader>
-          <img src="http://preloaders.net/preloaders/166/Pacman.gif" class="ajax-loader"/>
-        </div> -->
+        <custom-loader></custom-loader>
         <div class="row">
-          <div class="stationVelib col-sm-3 col-xs-6" data-ng-repeat="station in vm.stations">
+          <div class="searchBlock">
+            <input type="text" ng-model="search" ng-change="firstPage()" class="search-query form-control" placeholder="Rechercher une station ...">
+            <span paginator items="stations | filter:search"></span>
+          </div>
+          <div class="stationVelib col-sm-3 col-xs-12" data-ng-repeat="station in pageItems()">
             <div class="thumbnail velib">
               <!-- <img data-src="#" alt="{{ station.name }}" /> -->
               <div class="caption">
@@ -24,11 +26,11 @@
                 <ul class="list-group totalBikes">
                   <li class="slotAvailable list-group-item">
                     <span class="badge pull-right">{{ station.slotsavailable }}</span>
-                    Total de vélos:
+                    Places disponibles:
                   </li>
                   <li class="bikeAvailable list-group-item">
                     <span class="badge pull-right">{{ station.bikesavailable }}</span>
-                    Disponibles:
+                    Vélos disponibles:
                   </li>
                 </ul>
                 <a data-ng-href="/detail-station/{{ station.number }}" class="btn btn-primary detailVelib">Détail</a>

@@ -9,6 +9,7 @@ module.exports = angular
   ])
   .config(require('./config/routing'))
   .controller('HomeController', require('./controllers/home'))
-  .controller('BikeStationDetailController', require('./controller/bikeStationDetail'))
+  .controller('BikeStationDetailController', require('./controllers/bikeStationDetail'))
   .directive('customLoader', require('./directive/customLoader'))
+  .directive('paginator', require('./directive/paginator'))
 ;

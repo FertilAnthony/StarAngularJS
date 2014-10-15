@@ -3,8 +3,8 @@
 module.exports = angular
   .module('boilerplate.common', [])
   .factory('Tracer', require('./factory/tracer'))
-  .factory('Loader', require('./factory/loader'))
-  .config(['$httpProvider', function($httpProvider) {
+  .config(function($provide, $httpProvider) {
+    $provide.factory('Loader', require('./factory/loader'));
     $httpProvider.interceptors.push('Loader');
-  }])
+  })
 ;
