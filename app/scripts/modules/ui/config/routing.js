@@ -14,11 +14,10 @@ function RoutingConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 	  	templateUrl: '/views/accueil.html',
 	  	controller: 'HomeController as vm'
 	  })
-  	.state('detail', {
+  	.state('detail-station', {
   		url: '/detail-station/:id',
   		templateUrl: 'views/detail_station.html',
-  		controller: 'BikeStationDetailController as vm',
-      params: ['id']
+  		controller: 'BikeStationDetailController as vm'
   	});
 
   // Configuration du push state
