@@ -10,7 +10,7 @@ function HomeController(Stations, $log, $scope) {
 	vm.welcomeMessage = 'Bienvenue dans l\'application pour la star de Rennes';
 	//vm.stations = [];
 	$scope.stations = [];
-
+	$scope.showLoader = true;
 
 	Stations.get().then(function onSuccess(response) {
 		var stations = response.data.opendata.answer.data.station;

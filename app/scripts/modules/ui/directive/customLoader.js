@@ -8,18 +8,17 @@ function customLoader($log) {
 	return {
 		restrict: 'E', // Element
 		template: 
-		'<div id="loaderDiv" class="customLoader" ng-show="{{ vm.showLoader }}">' +
+		'<div id="loaderDiv" class="customLoader" ng-show="showLoader">' +
           '<img src="http://preloaders.net/preloaders/166/Pacman.gif" class="ajax-loader"/>' +
         '</div>',
         link:
-		function (vm, $element) {
-			$log.log(vm);
-	        vm.$on('loaderShow', function () {
-	            vm.showLoader = true;
+		function ($scope, $element) {
+	        $scope.$on('loaderShow', function () {
+	            $scope.showLoader = true;
 	            return $element;
 	        });
-	        vm.$on('loaderHide', function () {
-	            vm.showLoader = false;
+	        $scope.$on('loaderHide', function () {
+	            $scope.showLoader = false;
 	            return $element;
 	        });
     	}
