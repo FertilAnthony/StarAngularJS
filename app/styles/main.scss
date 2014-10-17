@@ -45,13 +45,13 @@ body {
 	.positionnement {
 		text-align: center;
 
-		.district {
-			width: 200px; /* à modifier selon vos besoins */
+		/*.district {
+			width: 200px;
 			overflow: hidden;
-			-o-text-overflow: ellipsis; /* pour Opera 9 */
+			-o-text-overflow: ellipsis;
 			text-overflow: ellipsis;
 			white-space: nowrap;
-		}
+		}*/
 	}
 
 	#loaderDiv {
@@ -78,7 +78,7 @@ body {
 		margin: 5px 15px 20px 15px;
 
 		.form-control {
-			width: 290px;
+			width: 31.6%;
 			margin-bottom: 10px;
 
 			@include mobile() {
@@ -89,14 +89,11 @@ body {
 				width: 80px;
 				display: inline-block;
 				margin-left: 56px;
-			}
-		}
 
-		.next {
-			margin-left: 57px;
-		}
-		.previous {
-			margin-right: 57px;
+				@include tablet() {
+					margin: 0;
+				}
+			}
 		}
 
 		.page {
@@ -105,14 +102,37 @@ body {
 		}
 
 		.pageSize {
+			width: 31.6%;
 			text-align: center;
+
+			@include mobile() {
+				width: 100%;
+			}
 		}
 
 		.paginated {
 			margin-bottom: 20px;
+			width: 31.6%;
+			text-align: center;
 
 			@include mobile() {
 				text-align: center;
+				width: 100%;
+			}
+
+			.next {
+				margin-left: 57px;
+
+				@include tablet() {
+					margin-left: 20px;
+				}
+			}
+			.previous {
+				margin-right: 57px;
+
+				@include tablet() {
+					margin-right: 20px;
+				}
 			}
 		}
 	}
