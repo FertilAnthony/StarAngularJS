@@ -9,7 +9,6 @@ function BikeStationDetailController(Stations, $scope, $stateParams, $log) {
 
 	$scope.detailStation = {};
 	$scope.showLoader = true;
-	$log.log($scope);
 
 	Stations.getById($stateParams.id).then(function onSuccess(response) {
 		var detailStation = response.data.opendata.answer.data.station;

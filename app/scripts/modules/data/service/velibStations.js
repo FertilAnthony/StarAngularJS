@@ -39,7 +39,10 @@ function StationsService($http, $log, OpenDataApi) {
         version: OpenDataApi.version,
         key: OpenDataApi.key,
         cmd: 'getbikestations', // A modifier pour les bus après
-        number: idStation
+        param: {
+          request: 'number',
+          value: idStation
+        }
       }
     };
     // TODO: Appel au web service en utilisant le service angular $http
