@@ -3,11 +3,20 @@
 /**
  * @ngInject
  */
-function BikeStationDetailController($log) {
+function BikeStationDetailController(Stations, $scope, $stateParams, $log) {
 	// ViewModel
 	var vm = this;
 
-	vm.station = {};
+	$scope.detailStation = {};
+	$scope.showLoader = true;
+	$log.log($scope);
+
+	Stations.getById($stateParams.id).then(function onSuccess(response) {
+		var detailStation = response.data.opendata.answer.data.station;
+		//vm.stations = stations;
+		$scope.detailStation = detailStation;
+		$log.log(detailStation);
+	});
 
 }
 

@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function customLoader($log) {
+function customLoader() {
 
 	return {
 		restrict: 'E', // Element
