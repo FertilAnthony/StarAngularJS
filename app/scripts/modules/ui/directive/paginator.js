@@ -3,22 +3,12 @@
 /**
  * @ngInject
  */
-function paginator($log) {
-
-	var pageSizeLabel = 'Nombre d\'items par page';
+function paginator() {
 
 	return {
 		restrict: 'A', // Attribut
 		scope: {items: '&'},
-		template: '<div class="paginated">' +
-			'<button ng-disabled="isFirstPage()" ng-click="firstPage()" class="btn btn-default first">&laquo;</button>' +
-			'<button ng-disabled="isFirstPage()" ng-click="decPage()" class="btn btn-default previous">&lsaquo;</button>' +
-            '{{paginator.currentPage+1}}/{{numberOfPages()}}' +
-            '<button ng-disabled="isLastPage()" ng-click="incPage()" class="btn btn-default next">&rsaquo;</button>' +
-            '<button ng-disabled="isLastPage()" ng-click="lastPage()" class="btn btn-default last">&raquo;</button><br/>' +
-            '</div>' +
-            '<span>' + pageSizeLabel + '</span>' +
-            '<select ng-model="paginator.pageSize" ng-options="size for size in pageSizeList" class="form-control nbItems"></select>',
+		templateUrl: '/views/directives/paginator.html',
 	    replace: false,
 	    compile: function compile() {
 	      return {

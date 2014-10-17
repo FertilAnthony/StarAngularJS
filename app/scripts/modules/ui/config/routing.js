@@ -16,7 +16,7 @@ function RoutingConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 	  })
   	.state('detail-station', {
   		url: '/detail-station/:id',
-  		templateUrl: 'views/detail_station.html',
+  		templateUrl: '/views/detail_station.html',
   		controller: 'BikeStationDetailController as vm'
   	});
 
