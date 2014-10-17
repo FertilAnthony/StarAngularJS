@@ -81,6 +81,10 @@ body {
 			width: 290px;
 			margin-bottom: 10px;
 
+			@include mobile() {
+				width: 100%;
+			}
+
 			&.nbItems {
 				width: 80px;
 				display: inline-block;
@@ -89,14 +93,27 @@ body {
 		}
 
 		.next {
-			margin-left: 62px;
+			margin-left: 57px;
 		}
 		.previous {
-			margin-right: 62px;
+			margin-right: 57px;
+		}
+
+		.page {
+			width: 30px;
+			display: inline-block;
+		}
+
+		.pageSize {
+			text-align: center;
 		}
 
 		.paginated {
 			margin-bottom: 20px;
+
+			@include mobile() {
+				text-align: center;
+			}
 		}
 	}
   }

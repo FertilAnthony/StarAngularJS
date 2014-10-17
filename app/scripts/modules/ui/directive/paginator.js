@@ -13,9 +13,9 @@ function paginator() {
 	    compile: function compile() {
 	      return {
 	        pre: function preLink(scope) {
-	          scope.pageSizeList = [10, 20, 50, 100];
+	          scope.pageSizeList = [9, 18, 45, 100];
 	          scope.paginator = {
-	            pageSize: 10,
+	            pageSize: 9,
 	            currentPage: 0
 	          };
 
