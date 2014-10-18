@@ -6,8 +6,7 @@
 function HomeController(Stations, $log, $scope) {
 	// ViewModel
 	var vm = this;
-
-	vm.welcomeMessage = 'Bienvenue dans l\'application pour la star de Rennes';
+	
 	//vm.stations = [];
 	$scope.stations = [];
 	$scope.showLoader = true;

@@ -20,7 +20,7 @@ function StationsService($http, $log, OpenDataApi) {
       params: {
         version: OpenDataApi.version,
         key: OpenDataApi.key,
-        cmd: 'getbikestations' // A modifier pour les bus après
+        cmd: OpenDataApi.cmd
       }
     };
     // TODO: Appel au web service en utilisant le service angular $http
@@ -32,19 +32,22 @@ function StationsService($http, $log, OpenDataApi) {
   }
 
   function getById(idStation) {
+    var parameter = '?param[station]=number&param[value]=' + idStation
+
     var apiArgs = {
-      url: OpenDataApi.url,
+      url: OpenDataApi.url + parameter,
       method: 'GET',
       params: {
         version: OpenDataApi.version,
         key: OpenDataApi.key,
-        cmd: 'getbikestations', // A modifier pour les bus après
-        param: {
-          request: 'number',
-          value: idStation
-        }
+        cmd: OpenDataApi.cmd
+      },
+      param: {
+        station: 'number',
+        value: idStation
       }
     };
+    $log.log(apiArgs);
     // TODO: Appel au web service en utilisant le service angular $http
     var promise = $http(apiArgs);
     promise.then(function onSuccess(response) {
