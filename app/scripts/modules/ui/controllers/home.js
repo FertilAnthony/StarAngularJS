@@ -5,7 +5,7 @@
  */
 function HomeController(Stations, $log, $scope) {
 	// ViewModel
-	var vm = this;
+	// var vm = this;
 	
 	//vm.stations = [];
 	$scope.stations = [];

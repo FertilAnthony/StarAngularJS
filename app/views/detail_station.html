@@ -1,21 +1,21 @@
+<custom-loader></custom-loader>
 <div class="detailStation">
 	<div class="caption">
 		<h3 class="name">{{ ::detailStation.name }}</h3>
 	</div>
-	<div class="bottom">
-		<div class="positionnement">
-			<div class="district">{{ ::detailStation.district }}</div>
-			<div class="adresse">{{ ::detailStation.address }}</div>
-		</div>
-		<ul class="list-group totalBikes">
-		<li class="slotAvailable list-group-item">
-		  <span class="badge pull-right">{{ ::detailStation.slotsavailable }}</span>
-		  Places disponibles:
-		</li>
-		<li class="bikeAvailable list-group-item">
-		  <span class="badge pull-right">{{ ::detailStation.bikesavailable }}</span>
-		  Vélos disponibles:
-		</li>
-		</ul>
+	<div class="positionnement">
+		<div class="district">{{ ::detailStation.district }}</div>
+		<div class="adresse">{{ ::detailStation.address }}</div>
+	</div>
+	<!-- <div class="CB">
+		Paiement par carte : 
+	</div> -->
+	<div class="progressBar">
+		<span class="placesDispos">Places disponibles: </span>
+		<progressbar class="col-md-3" max="max" value="detailStation.bikesavailable" type="{{typePlaces}}">{{ ::detailStation.slotsavailable }} / {{ ::max }}</progressbar>
+	</div>
+	<div class="progressBar">
+		<span class="bikesDispos">Vélos disponibles: </span>
+		<progressbar class="col-md-3" max="max" value="detailStation.bikesavailable" type="{{typeBikes}}">{{ ::detailStation.bikesavailable }} / {{ ::max }}</progressbar>
 	</div>
 </div>

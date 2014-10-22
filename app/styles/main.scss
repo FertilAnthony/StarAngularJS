@@ -7,6 +7,26 @@ body {
     color: #333333;
   }
 
+  #loaderDiv {
+	   position: fixed;
+	   top: 0;
+	   right: 0;
+	   bottom: 0;
+	   left: 0;
+	   z-index: 1100;
+	   background-color: white;
+	   opacity: .6;
+	}
+
+	.ajax-loader {
+	   position: absolute;
+	   left: 50%;
+	   top: 50%;
+	   margin-left: -32px; /* -1 * image width / 2 */
+	   margin-top: -32px; /* -1 * image height / 2 */
+	   display: block;
+	}
+
   .listeContent {
 
   	.name {
@@ -54,25 +74,25 @@ body {
 		}*/
 	}
 
-	#loaderDiv {
-	   position: fixed;
-	   top: 0;
-	   right: 0;
-	   bottom: 0;
-	   left: 0;
-	   z-index: 1100;
-	   background-color: white;
-	   opacity: .6;
+	.closedStation {
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		opacity: 0.4;
+		background-color: black;
+		z-index: 999;
+		margin-left: -4px;
+		margin-top: -4px;
+		border-radius: 2px;
 	}
 
-	.ajax-loader {
-	   position: absolute;
-	   left: 50%;
-	   top: 50%;
-	   margin-left: -32px; /* -1 * image width / 2 */
-	   margin-top: -32px; /* -1 * image height / 2 */
-	   display: block;
+	.popinAlert {
+		z-index: 1000;
+		position: absolute;
+		bottom: -10px;
+		left: 9px;
 	}
+	
 	
 	.searchBlock {
 		margin: 5px 15px 20px 15px;
@@ -137,6 +157,26 @@ body {
 		}
 	}
   }
+
+  .detailStation {
+  	.placesDispos {
+	  	float: left;
+	  	margin-right: 15px;
+	}
+	  .bikesDispos {
+	  	float: left;
+	  	margin-right: 21px;
+	}
+
+	  .progressBar {
+	  	clear: both;
+	}
+
+	.adresse {
+		margin-bottom: 20px;
+	}
+  }
+
 }
 
 .nav, .pagination, .carousel, .panel-title a { 

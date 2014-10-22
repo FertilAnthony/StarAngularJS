@@ -32,7 +32,7 @@ function StationsService($http, $log, OpenDataApi) {
   }
 
   function getById(idStation) {
-    var parameter = '?param[station]=number&param[value]=' + idStation
+    var parameter = '?param[station]=number&param[value]=' + idStation;
 
     var apiArgs = {
       url: OpenDataApi.url + parameter,
@@ -47,7 +47,7 @@ function StationsService($http, $log, OpenDataApi) {
         value: idStation
       }
     };
-    $log.log(apiArgs);
+
     // TODO: Appel au web service en utilisant le service angular $http
     var promise = $http(apiArgs);
     promise.then(function onSuccess(response) {
