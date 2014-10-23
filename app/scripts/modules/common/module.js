@@ -7,4 +7,5 @@ module.exports = angular
     $provide.factory('Loader', require('./factory/loader'));
     $httpProvider.interceptors.push('Loader');
   })
+  .service('Geolocation', require('./service/geolocation'))
 ;
