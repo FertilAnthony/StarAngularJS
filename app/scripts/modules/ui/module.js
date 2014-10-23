@@ -8,8 +8,9 @@ module.exports = angular
     'ui.router'
   ])
   .config(require('./config/routing'))
-  .controller('HomeController', require('./controllers/home'))
+  .controller('VelibController', require('./controllers/velibStations'))
   .controller('BikeStationDetailController', require('./controllers/bikeStationDetail'))
   .directive('customLoader', require('./directive/customLoader'))
   .directive('paginator', require('./directive/paginator'))
+  .controller('BusStationsController', require('./controllers/busStations'))
 ;

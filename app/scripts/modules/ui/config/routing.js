@@ -11,14 +11,24 @@ function RoutingConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
   	.state('accueil', {
 	  	url: '/accueil',
-	  	templateUrl: '/views/accueil.html',
-	  	controller: 'HomeController as vm'
+	  	templateUrl: '/views/accueil.html'
 	  })
-  	.state('detail-station', {
-  		url: '/detail-station/:id',
+    .state('velib-stations', {
+      url: '/velib-stations',
+      templateUrl: '/views/velib_stations.html',
+      controller: 'VelibController as vm'
+    })
+  	.state('detail-velib-station', {
+  		url: '/velib-stations/detail/:id',
   		templateUrl: '/views/detail_station.html',
   		controller: 'BikeStationDetailController as vm'
-  	});
+  	})
+    /*.state('bus-stations', {
+      url: '/bus-stations',
+      templateUrl: '/views/bus_stations.html',
+      controller: 'BusController as vm'
+    })*/
+  ;
 
   // Configuration du push state
   $locationProvider.html5Mode(true);

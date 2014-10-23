@@ -6,4 +6,6 @@ module.exports = angular
   ])
   .factory('Stations', require('./service/velibStations'))
   .constant('OpenDataApi', require('./constant/api'))
+  .factory('BusStations', require('./service/busStations'))
+  .constant('OpenBusDataApi', require('./constant/apiBus'))
 ;

@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function HomeController(Stations, $log, $scope) {
+function HomeController(BusStations, $log, $scope) {
 	// ViewModel
 	// var vm = this;
 	
@@ -11,7 +11,7 @@ function HomeController(Stations, $log, $scope) {
 	$scope.stations = [];
 	$scope.showLoader = true;
 
-	Stations.get().then(function onSuccess(response) {
+	BusStations.get().then(function onSuccess(response) {
 		var stations = response.data.opendata.answer.data.station;
 		//vm.stations = stations;
 		$scope.stations = stations;
