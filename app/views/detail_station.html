@@ -11,12 +11,12 @@
 	<!-- <div class="CB">
 		Paiement par carte : 
 	</div> -->
-	<div class="progressBar">
+	<div class="progressBar col-md-6">
 		<span class="placesDispos">Places disponibles: </span>
-		<progressbar class="col-md-3" max="max" value="detailStation.bikesavailable" type="{{typePlaces}}">{{ ::detailStation.slotsavailable }} / {{ ::max }}</progressbar>
+		<progressbar value="( detailStation.slotsavailable * 100 ) / max" max="100" type="{{typePlaces}}"><span class="nbDispos">{{ ::detailStation.slotsavailable }} <span ng-show="show">/</span> {{ ::max }}</span></progressbar>
 	</div>
-	<div class="progressBar">
+	<div class="progressBar col-md-6">
 		<span class="bikesDispos">Vélos disponibles: </span>
-		<progressbar class="col-md-3" max="max" value="detailStation.bikesavailable" type="{{typeBikes}}">{{ ::detailStation.bikesavailable }} / {{ ::max }}</progressbar>
+		<progressbar value="( detailStation.bikesavailable * 100 ) / max" max="100" type="{{typeBikes}}"><span class="nbDispos">{{ ::detailStation.bikesavailable }} <span ng-show="show">/</span> {{ ::max }}</span></progressbar>
 	</div>
 </div>

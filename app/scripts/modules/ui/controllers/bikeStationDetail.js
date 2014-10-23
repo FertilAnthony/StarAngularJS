@@ -3,12 +3,13 @@
 /**
  * @ngInject
  */
-function BikeStationDetailController(Stations, $scope, $stateParams, $log) {
+function BikeStationDetailController(Stations, $scope, $stateParams, $log, $timeout) {
 	// ViewModel
 	// var vm = this;
 
 	$scope.detailStation = {};
 	$scope.showLoader = true;
+	$scope.show = false;
 
 	Stations.getById($stateParams.id).then(function onSuccess(response) {
 		var detailStation = response.data.opendata.answer.data.station,
@@ -39,6 +40,11 @@ function BikeStationDetailController(Stations, $scope, $stateParams, $log) {
 		$scope.typeBikes = typeBikes;
 		$scope.typePlaces = typePlaces;
 		$scope.max = totalBikes;
+
+		$timeout(function(){
+		    $scope.show = true;
+		}, 200);
+
 		$log.log($scope);
 		$log.log(detailStation);
 
