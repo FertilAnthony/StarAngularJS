@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function BusStationsService($http, $log, OpenBusDataApi) {
+function BusLinesService($http, $log, OpenBusDataApi) {
   // Interface
   var service = {
     get: get,
@@ -57,4 +57,4 @@ function BusStationsService($http, $log, OpenBusDataApi) {
   }
 }
 
-module.exports = BusStationsService;
+module.exports = BusLinesService;

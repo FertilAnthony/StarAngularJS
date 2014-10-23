@@ -23,11 +23,11 @@ function RoutingConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   		templateUrl: '/views/detail_station.html',
   		controller: 'BikeStationDetailController as vm'
   	})
-    /*.state('bus-stations', {
-      url: '/bus-stations',
-      templateUrl: '/views/bus_stations.html',
-      controller: 'BusController as vm'
-    })*/
+    .state('bus-lines', {
+      url: '/bus-lines',
+      templateUrl: '/views/bus_lines.html',
+      controller: 'BusLinesController as vm'
+    })
   ;
 
   // Configuration du push state

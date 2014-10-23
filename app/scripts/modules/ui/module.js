@@ -12,5 +12,5 @@ module.exports = angular
   .controller('BikeStationDetailController', require('./controllers/bikeStationDetail'))
   .directive('customLoader', require('./directive/customLoader'))
   .directive('paginator', require('./directive/paginator'))
-  .controller('BusStationsController', require('./controllers/busStations'))
+  .controller('BusLinesController', require('./controllers/busLines'))
 ;
