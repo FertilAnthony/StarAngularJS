@@ -174,12 +174,31 @@ body {
 	}
 
 	.adresse {
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 
 	.nbDispos {
 		white-space: nowrap;
 		color: black;
+	}
+
+	.CB {
+		margin-bottom: 20px;
+
+		.no_paiement {
+			color: red;
+			font-size: 20px;
+			line-height: 20px;
+			vertical-align: middle;
+			margin-left: 5px;
+		}
+		.paiement_OK {
+			color: green;
+			font-size: 20px;
+			line-height: 20px;
+			vertical-align: middle;
+			margin-left: 5px;
+		}
 	}
   }
 

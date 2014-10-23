@@ -9,9 +9,11 @@
 		<div class="district">{{ ::detailStation.district }}</div>
 		<div class="adresse">{{ ::detailStation.address }}</div>
 	</div>
-	<!-- <div class="CB">
-		Paiement par carte : 
-	</div> -->
+	<div class="CB">
+		Paiement par carte :
+		<span class="paiement_OK glyphicon glyphicon-ok" ng-show="detailStation.pos == 1"></span>
+		<span class="no_paiement glyphicon glyphicon-remove" ng-show="detailStation.pos == 0"></span> 
+	</div>
 	<div class="progressBar col-md-6">
 		<span class="placesDispos">Places disponibles: </span>
 		<progressbar value="( detailStation.slotsavailable * 100 ) / max" max="100" type="{{typePlaces}}"><span class="nbDispos">{{ ::detailStation.slotsavailable }} <span ng-show="show">/</span> {{ ::max }}</span></progressbar>
