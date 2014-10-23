@@ -5,7 +5,8 @@ module.exports = angular
     'boilerplate.common',
     'boilerplate.data',
     'ui.bootstrap',
-    'ui.router'
+    'ui.router',
+    'ui.map'
   ])
   .config(require('./config/routing'))
   .controller('VelibController', require('./controllers/velibStations'))

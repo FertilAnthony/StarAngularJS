@@ -31,7 +31,7 @@ function BusLinesService($http, $log, OpenBusDataApi) {
     return promise;
   }
 
-  function getById(idStation) {
+  function getById(idLine) {
     /*var parameter = '?param[station]=number&param[value]=' + idStation;
 
     var apiArgs = {

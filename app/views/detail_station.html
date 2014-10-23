@@ -22,4 +22,6 @@
 		<span class="bikesDispos">Vélos disponibles: </span>
 		<progressbar value="( detailStation.bikesavailable * 100 ) / max" max="100" type="{{typeBikes}}"><span class="nbDispos">{{ ::detailStation.bikesavailable }} <span ng-show="show">/</span> {{ ::max }}</span></progressbar>
 	</div>
+	<!-- Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting google maps -->
+	<div id="map_canvas" ui-map="map" class="map" ui-options="options"></div>
 </div>
