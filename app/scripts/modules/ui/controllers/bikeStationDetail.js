@@ -87,6 +87,8 @@ function BikeStationDetailController(Stations, $scope, $stateParams, $log, $time
                     });
                     $log.log(instructions);
                     $scope.instructions = instructions;
+                    $scope.distanceTotal = response.routes[0].legs[0].distance['text'];
+                    $scope.tempsTotal = response.routes[0].legs[0].duration['text'];
                     $scope.showInstructions = true;
                 }
             });
