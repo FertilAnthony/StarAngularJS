@@ -25,11 +25,14 @@
 	<button ng-click="geolocalize()" class="btn btn-default geoloc">Géolocalisation</button>
 	<!-- Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting google maps -->
 	<div id="map_canvas" ui-map="map" class="map" ui-options="options"></div>
-	<div class="instructions" ng-repeat="instruction in instructions">
-		<div class="instruction">
-			{{ ::instruction.distance }}
-			{{ ::instruction.duration }}
-			<div ng-bind-html="instruction.instruction"></div>
-		</div>
+	<div class="panel panel-default" ng-show="showInstructions">
+		<div class="panel-heading">Instructions de navigation</div>
+		<ul class="list-group">
+			<li class="instructions list-group-item" ng-repeat="instruction in instructions">
+				Distance: {{ ::instruction.distance }}<br/>
+				Temps: {{ ::instruction.duration }}
+				<div ng-bind-html="instruction.instruction"></div>
+			</li>
+		</ul>
 	</div>
 </div>

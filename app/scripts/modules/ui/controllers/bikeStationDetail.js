@@ -10,6 +10,7 @@ function BikeStationDetailController(Stations, $scope, $stateParams, $log, $time
 	$scope.detailStation = {};
 	$scope.showLoader = true;
 	$scope.show = false;
+	$scope.showInstructions = false;
 	$scope.map = {};
 	$scope.markers = [];
 	$scope.instructions = [];
@@ -86,6 +87,7 @@ function BikeStationDetailController(Stations, $scope, $stateParams, $log, $time
                     });
                     $log.log(instructions);
                     $scope.instructions = instructions;
+                    $scope.showInstructions = true;
                 }
             });
         }
