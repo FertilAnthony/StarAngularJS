@@ -6,3 +6,4 @@ require('../../vendor/angular-bootstrap/ui-bootstrap-tpls');
 require('../../vendor/angular-ui-router/release/angular-ui-router');
 require('../../vendor/angular-ui-map/ui-map');
 require('../../vendor/angular-ui-utils/ui-utils');
+require('../../vendor/angular-sanitize/angular-sanitize');

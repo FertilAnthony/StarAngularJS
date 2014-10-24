@@ -12,6 +12,7 @@ function BikeStationDetailController(Stations, $scope, $stateParams, $log, $time
 	$scope.show = false;
 	$scope.map = {};
 	$scope.markers = [];
+	$scope.instructions = [];
 	$scope.distance = 0;
 	$scope.options = {
 	    zoom: 15,
@@ -68,13 +69,23 @@ function BikeStationDetailController(Stations, $scope, $stateParams, $log, $time
             //which returns a response which can be directly provided to
             //directiondisplay object to display the route returned on the map
             $scope.directionsService.route(request, function(response, status) {
-
+            	var instructions = [];
                 if (status == google.maps.DirectionsStatus.OK) {
+                	instructions = response.routes[0].legs[0].steps;
                     console.log(response);
                     directionsDisplay.setDirections(response);
                     console.log(response.routes.length);
                     $scope.distance = response.routes[0].legs[0].distance.value / 1000;
-
+                    // Récupération des instructions
+                    instructions = instructions.map(function(instruction) {
+                    	return {
+                    		duration: instruction.duration['text'],
+                    		distance: instruction.distance['text'],
+                    		instruction: instruction.instructions
+                    	}
+                    });
+                    $log.log(instructions);
+                    $scope.instructions = instructions;
                 }
             });
         }

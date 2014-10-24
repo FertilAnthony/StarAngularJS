@@ -6,7 +6,8 @@ module.exports = angular
     'boilerplate.data',
     'ui.bootstrap',
     'ui.router',
-    'ui.map'
+    'ui.map',
+    'ngSanitize'
   ])
   .config(require('./config/routing'))
   .controller('VelibController', require('./controllers/velibStations'))
