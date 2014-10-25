@@ -1,0 +1,152 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body h1 {
+  color: #333333; }
+body #loaderDiv {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1100;
+  background-color: white;
+  opacity: 0.6; }
+body .ajax-loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -32px;
+  /* -1 * image width / 2 */
+  margin-top: -32px;
+  /* -1 * image height / 2 */
+  display: block; }
+body .listeContent .name {
+  margin-top: 10px; }
+body .listeContent .tab-content {
+  margin-top: 30px; }
+body .listeContent .stationVelib .name {
+  text-align: center; }
+body .listeContent .detailVelib {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%; }
+body .listeContent .totalBikes {
+  margin-top: 10px; }
+body .listeContent .thumbnail.velib {
+  height: 310px;
+  position: relative; }
+body .listeContent .bottom {
+  position: absolute;
+  bottom: 15px;
+  width: 96.5%; }
+body .listeContent .positionnement {
+  text-align: center;
+  /*.district {
+			width: 200px;
+			overflow: hidden;
+			-o-text-overflow: ellipsis;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}*/ }
+body .listeContent .closedStation {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  opacity: 0.4;
+  background-color: black;
+  z-index: 999;
+  margin-left: -4px;
+  margin-top: -4px;
+  border-radius: 2px; }
+body .listeContent .popinAlert {
+  z-index: 1000;
+  position: absolute;
+  top: 81%;
+  left: 0px;
+  width: 100%; }
+body .listeContent .searchBlock {
+  margin: 5px 15px 20px 15px; }
+  body .listeContent .searchBlock .form-control {
+    width: 31.6%;
+    margin-bottom: 10px; }
+    @media all and (max-width: 767px) {
+      body .listeContent .searchBlock .form-control {
+        width: 100%; } }
+    body .listeContent .searchBlock .form-control.nbItems {
+      width: 80px;
+      display: inline-block;
+      margin-left: 30px; }
+      @media all and (min-width: 768px) and (max-width: 979px) {
+        body .listeContent .searchBlock .form-control.nbItems {
+          margin: 0; } }
+  body .listeContent .searchBlock .page {
+    width: 30px;
+    display: inline-block; }
+  body .listeContent .searchBlock .pageSize {
+    width: 31.6%;
+    text-align: center; }
+    @media all and (max-width: 767px) {
+      body .listeContent .searchBlock .pageSize {
+        width: 100%; } }
+  body .listeContent .searchBlock .paginated {
+    margin-bottom: 20px;
+    width: 31.6%;
+    text-align: center; }
+    @media all and (max-width: 767px) {
+      body .listeContent .searchBlock .paginated {
+        text-align: center;
+        width: 100%; } }
+    body .listeContent .searchBlock .paginated .next {
+      margin-left: 57px; }
+      @media all and (min-width: 768px) and (max-width: 979px) {
+        body .listeContent .searchBlock .paginated .next {
+          margin-left: 20px; } }
+    body .listeContent .searchBlock .paginated .previous {
+      margin-right: 57px; }
+      @media all and (min-width: 768px) and (max-width: 979px) {
+        body .listeContent .searchBlock .paginated .previous {
+          margin-right: 20px; } }
+body .detailStation .placesDispos {
+  float: left;
+  margin-right: 15px; }
+body .detailStation .bikesDispos {
+  float: left;
+  margin-right: 21px; }
+body .detailStation .progressBar {
+  clear: both; }
+body .detailStation .adresse {
+  margin-bottom: 10px; }
+body .detailStation .nbDispos {
+  white-space: nowrap;
+  color: black; }
+body .detailStation .CB {
+  margin-bottom: 20px; }
+  body .detailStation .CB .no_paiement {
+    color: red;
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    margin-left: 5px; }
+  body .detailStation .CB .paiement_OK {
+    color: green;
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    margin-left: 5px; }
+body .detailStation .map {
+  height: 400px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 50px; }
+body .detailStation .geoloc {
+  display: block;
+  clear: both;
+  margin-bottom: 15px; }
+body .detailStation .distanceTot {
+  margin-bottom: 10px; }
+
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer; }
