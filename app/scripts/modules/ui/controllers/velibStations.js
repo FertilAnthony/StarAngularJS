@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function VelibController(Stations, $log, $scope) {
+function VelibController(Stations, $log, $scope, Geolocation) {
 	// ViewModel
 	// var vm = this;
 	
@@ -23,6 +23,15 @@ function VelibController(Stations, $log, $scope) {
 			$scope.firstPage();
 		} 
 	});
+	
+	// HTML5 geolocalize
+	$scope.findNearStation = function() {
+		Geolocation.getCurrentPosition().then(function onGetCurrentPosition(geoposition) {
+			var coords = geoposition.coords;
+			// Set itineraire
+			$log.log(coords);
+		});
+	}
 
 }
 
