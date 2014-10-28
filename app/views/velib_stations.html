@@ -3,7 +3,7 @@
   <custom-loader></custom-loader>
   <div class="row">
     <div class="searchBlock">
-      <input type="text" ng-model="search" typeahead="station.name for station in stations | limitTo:8" ng-change="firstPage()" class="search-query form-control" placeholder="Rechercher une station ...">
+      <input type="text" ng-model="search.name" typeahead="station as station.name for station in stations | filter:{name:$viewValue} | limitTo:8 | orderBy:name" ng-change="firstPage()" class="search-query form-control" placeholder="Rechercher une station ...">
       <span paginator items="stations | filter:search"></span>
     </div>
     <div class="stationVelib col-sm-4 col-xs-12" data-ng-repeat="station in pageItems()">
