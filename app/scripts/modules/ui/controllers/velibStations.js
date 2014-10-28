@@ -17,6 +17,12 @@ function VelibController(Stations, $log, $scope) {
 		$scope.stations = stations;
 		$log.log(stations);
 	});
+	
+	$scope.$watch('search', function(newValue, oldValue) {
+		if (newValue != oldValue) {
+			$scope.firstPage();
+		} 
+	});
 
 }
 
